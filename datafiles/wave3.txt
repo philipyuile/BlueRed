@@ -1,0 +1,3 @@
+0,column,sin,blue,enemy1,7
+1,column,cos,red,enemy1,7
+400,end

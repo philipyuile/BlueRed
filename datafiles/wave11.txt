@@ -1,0 +1,8 @@
+0,left,straight,red
+200,right,straight,blue
+400,left,straight,red
+600,line,straight,blue
+800,staggered,straight,red
+1000,column,sin,blue
+1400,column,cos,red
+1800,end
