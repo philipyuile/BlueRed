@@ -1,3 +1,5 @@
-0,column,sin,blue,enemy1,6
-1,column,cos,red,enemy1,6
+0,staggered,straight,blue,enemy1,3
+50,staggered,straight,red,enemy1,3
+200,arrow,straight,blue,enemy3,3
+250,arrow,straight,red,enemy3,3
 400,end
