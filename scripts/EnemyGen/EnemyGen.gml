@@ -92,15 +92,15 @@ function InitEnemyGen()
 	
 	ds_map_add(formation_enemy_starts, "backarrow",
 		[
-			{ xpos : room_width, ypos : room_height * 9/10},
-			{ xpos : room_width * 21/20, ypos : room_height * 8/10},
-			{ xpos : room_width * 22/20, ypos : room_height * 7/10},
-			{ xpos : room_width * 23/20, ypos : room_height * 6/10},
-			{ xpos : room_width * 24/20, ypos : room_height * 5/10},
-			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
-			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
-			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
 			{ xpos : room_width, ypos : room_height * 1/10},
+			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
+			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
+			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
+			{ xpos : room_width * 24/20, ypos : room_height * 5/10},
+			{ xpos : room_width * 23/20, ypos : room_height * 6/10},
+			{ xpos : room_width * 22/20, ypos : room_height * 7/10},
+			{ xpos : room_width * 21/20, ypos : room_height * 8/10},
+			{ xpos : room_width, ypos : room_height * 9/10},
 		]
 	);
 
