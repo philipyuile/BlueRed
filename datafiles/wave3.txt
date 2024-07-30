@@ -1,3 +1,5 @@
 0,9,column,sin,blue,enemy1,5
 100,9,column,cos,red,enemy1,5
+200,9,column,sin,mixed,enemy1,5
+300,9,column,sin,altmixed,enemy1,5
 400,end

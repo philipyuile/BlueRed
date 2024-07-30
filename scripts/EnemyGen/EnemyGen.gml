@@ -121,18 +121,33 @@ function GenerateEnemySquad(_squad_data)
 		
 	for (i = 0; i < _squad_data.enemynumber; i++)
 	{
-		CreateEnemy(enemy_starts[i], _squad_data);
+		var _indiv_colour = "";
+		switch (_squad_data.colour)
+		{
+			case "red" :
+			case "blue" :
+				_indiv_colour = _squad_data.colour;
+				break;
+			case "mixed":
+				_indiv_colour = (i % 4 == 0 || i % 4 == 3) ? "red" : "blue";
+				break;
+			case "altmixed":
+				_indiv_colour = (i % 4 == 0 || i % 4 == 3) ? "blue" : "red";
+				break;
+		}
+		
+		CreateEnemy(enemy_starts[i], _squad_data, _indiv_colour);
 	}
 }
 
 
-function CreateEnemy(_pos, _squad_data)
+function CreateEnemy(_pos, _squad_data, _indiv_colour)
 {
 	obj = obj_enemy;
 	
 	var current = instance_create_layer(_pos.xpos, _pos.ypos, "Instances", obj);
-	sprite = asset_get_index("spr_" + _squad_data.enemytype + "_" +  _squad_data.colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
-	current.colour = _squad_data.colour;
+	sprite = asset_get_index("spr_" + _squad_data.enemytype + "_" +  _indiv_colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
+	current.colour = _indiv_colour;
 	current.speed = _squad_data.xspeed;
 	current.sprite_index = sprite;
 	current.initial_ypos = _pos.ypos;
