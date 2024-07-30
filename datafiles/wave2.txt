@@ -1,5 +1,5 @@
-0,staggered,straight,blue,enemy1,3
-50,staggered,straight,red,enemy1,3
-200,arrow,straight,blue,enemy3,3
-250,arrow,straight,red,enemy3,3
+0,7,staggered,straight,blue,enemy1,3
+50,5,staggered,straight,red,enemy1,3
+200,7,arrow,straight,blue,enemy3,3
+250,5,arrow,straight,red,enemy3,3
 400,end

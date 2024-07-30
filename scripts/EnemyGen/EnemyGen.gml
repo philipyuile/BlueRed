@@ -6,28 +6,28 @@ function InitEnemyGen()
 
 	ds_map_add(formation_enemy_starts, "left",
 		[
-			{ xpos : room_width, ypos : room_height * 1/10},
-			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
-			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
-			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 24/20, ypos : room_height * 5/10},
+			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 25/20, ypos : room_height * 6/10},
+			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
 			{ xpos : room_width * 26/20, ypos : room_height * 7/10},
+			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
 			{ xpos : room_width * 27/20, ypos : room_height * 8/10},
+			{ xpos : room_width, ypos : room_height * 1/10},
 			{ xpos : room_width * 28/20, ypos : room_height * 9/10},
 		]
 	);
 	
 	ds_map_add(formation_enemy_starts, "right",
 		[
-			{ xpos : room_width * 28/20, ypos : room_height * 1/10},
-			{ xpos : room_width * 27/20, ypos : room_height * 2/10},
-			{ xpos : room_width * 26/20, ypos : room_height * 3/10},
-			{ xpos : room_width * 25/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 24/20, ypos : room_height * 5/10},
+			{ xpos : room_width * 25/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 23/20, ypos : room_height * 6/10},
+			{ xpos : room_width * 26/20, ypos : room_height * 3/10},
 			{ xpos : room_width * 22/20, ypos : room_height * 7/10},
+			{ xpos : room_width * 27/20, ypos : room_height * 2/10},
 			{ xpos : room_width * 21/20, ypos : room_height * 8/10},
+			{ xpos : room_width * 28/20, ypos : room_height * 1/10},
 			{ xpos : room_width, ypos : room_height * 9/10},
 
 		]
@@ -35,32 +35,32 @@ function InitEnemyGen()
 	
 	ds_map_add(formation_enemy_starts, "line",
 		[
-			{ xpos : room_width, ypos : room_height * 1/10},
-			{ xpos : room_width, ypos : room_height * 2/10},
-			{ xpos : room_width, ypos : room_height * 3/10},
-			{ xpos : room_width, ypos : room_height * 4/10},
 			{ xpos : room_width, ypos : room_height * 5/10},
+			{ xpos : room_width, ypos : room_height * 4/10},
 			{ xpos : room_width, ypos : room_height * 6/10},
+			{ xpos : room_width, ypos : room_height * 3/10},
 			{ xpos : room_width, ypos : room_height * 7/10},
+			{ xpos : room_width, ypos : room_height * 2/10},
 			{ xpos : room_width, ypos : room_height * 8/10},
+			{ xpos : room_width, ypos : room_height * 1/10},
 			{ xpos : room_width, ypos : room_height * 9/10},
 		]
 	);
 	
 	ds_map_add(formation_enemy_starts, "staggered",
 		[
-			{ xpos : room_width * 11/10, ypos : room_height * 1/10},
-			{ xpos : room_width, ypos : room_height * 2/10},
-			{ xpos : room_width * 11/10, ypos : room_height * 3/10},
-			{ xpos : room_width, ypos : room_height * 4/10},
 			{ xpos : room_width * 11/10, ypos : room_height * 5/10},
+			{ xpos : room_width, ypos : room_height * 4/10},
 			{ xpos : room_width, ypos : room_height * 6/10},
+			{ xpos : room_width * 11/10, ypos : room_height * 3/10},
 			{ xpos : room_width * 11/10, ypos : room_height * 7/10},
+			{ xpos : room_width, ypos : room_height * 2/10},
 			{ xpos : room_width, ypos : room_height * 8/10},
+			{ xpos : room_width * 11/10, ypos : room_height * 1/10},
 			{ xpos : room_width * 11/10, ypos : room_height * 9/10}
 		]
 	);
-		
+
 	ds_map_add(formation_enemy_starts, "column",
 		[
 			{ xpos : room_width, ypos : room_height / 2},
@@ -74,32 +74,31 @@ function InitEnemyGen()
 			{ xpos : room_width * 18/10, ypos : room_height / 2},
 		]
 	);
-	
+
 	ds_map_add(formation_enemy_starts, "arrow",
 		[
-			{ xpos : room_width * 24/20, ypos : room_height * 1/10},
-			{ xpos : room_width * 23/20, ypos : room_height * 2/10},
-			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
-			{ xpos : room_width * 21/20, ypos : room_height * 4/10},
 			{ xpos : room_width, ypos : room_height * 5/10},
+			{ xpos : room_width * 21/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 21/20, ypos : room_height * 6/10},
+			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
 			{ xpos : room_width * 22/20, ypos : room_height * 7/10},
+			{ xpos : room_width * 23/20, ypos : room_height * 2/10},
 			{ xpos : room_width * 23/20, ypos : room_height * 8/10},
+			{ xpos : room_width * 24/20, ypos : room_height * 1/10},
 			{ xpos : room_width * 24/20, ypos : room_height * 9/10},
 
 		]
 	);
-	
 	ds_map_add(formation_enemy_starts, "backarrow",
 		[
-			{ xpos : room_width, ypos : room_height * 1/10},
-			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
-			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
-			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 24/20, ypos : room_height * 5/10},
+			{ xpos : room_width * 23/20, ypos : room_height * 4/10},
 			{ xpos : room_width * 23/20, ypos : room_height * 6/10},
+			{ xpos : room_width * 22/20, ypos : room_height * 3/10},
 			{ xpos : room_width * 22/20, ypos : room_height * 7/10},
+			{ xpos : room_width * 21/20, ypos : room_height * 2/10},
 			{ xpos : room_width * 21/20, ypos : room_height * 8/10},
+			{ xpos : room_width, ypos : room_height * 1/10},
 			{ xpos : room_width, ypos : room_height * 9/10},
 		]
 	);
@@ -120,7 +119,7 @@ function GenerateEnemySquad(_squad_data)
 {
 	enemy_starts = ds_map_find_value(formation_enemy_starts, _squad_data.start_formation);
 		
-	for (i = 0; i < array_length(enemy_starts); i++)
+	for (i = 0; i < _squad_data.enemynumber; i++)
 	{
 		CreateEnemy(enemy_starts[i], _squad_data);
 	}

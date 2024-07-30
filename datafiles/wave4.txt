@@ -1,3 +1,13 @@
-0,column,sin,blue,enemy1,8
-1,column,cos,red,enemy1,8
-400,end
+0,9,arrow,straight,red,enemy2,2
+50,9,arrow,straight,blue,enemy2,2
+100,9,arrow,straight,red,enemy2,2
+150,9,arrow,straight,blue,enemy2,2
+200,7,arrow,straight,red,enemy2,2
+250,7,arrow,straight,blue,enemy2,2
+300,5,arrow,straight,red,enemy2,2
+350,5,arrow,straight,blue,enemy2,2
+400,3,arrow,straight,red,enemy2,2
+450,3,arrow,straight,blue,enemy2,2
+500,1,arrow,straight,red,enemy2,2
+550,1,arrow,straight,blue,enemy2,2
+600,end
