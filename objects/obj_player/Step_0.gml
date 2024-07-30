@@ -29,6 +29,7 @@ else if (obj_game.game_status == GameStatusEnum.WAVE_COMPLETE_TWO)
 	{
 		speed = 0;
 	}
+	return;
 }
 
 EightWayMovement(vk_right, vk_left, vk_up, vk_down);
