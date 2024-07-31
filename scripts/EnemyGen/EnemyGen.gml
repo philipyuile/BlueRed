@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function InitEnemyGen()
+function init_enemy_gen()
 {
 	formation_enemy_starts = ds_map_create();
 
@@ -105,9 +105,9 @@ function InitEnemyGen()
 
 	formation_enemy_movement = ds_map_create();
 	
-	global.no_vert_movement = function(xpos, initial_ypos) {return initial_ypos; };
-	global.sin_vert_movement = function(xpos, initial_ypos) { return initial_ypos + sin(xpos / (room_width * 1/10)) * room_height / 5; };
-	global.cos_vert_movement = function(xpos, initial_ypos) { return initial_ypos + cos(xpos / 100.0) * 200; };
+	global.no_vert_movement = function(_xpos, _initial_ypos) {return _initial_ypos; };
+	global.sin_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + sin(_xpos / (room_width * 1/10)) * room_height / 5; };
+	global.cos_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + cos(_xpos / 100.0) * 200; };
 	
 	ds_map_add(formation_enemy_movement, "straight", global.no_vert_movement);
 	ds_map_add(formation_enemy_movement, "sin", global.sin_vert_movement);
@@ -115,11 +115,11 @@ function InitEnemyGen()
 
 }
 
-function GenerateEnemySquad(_squad_data)
+function generate_enemy_squad(_squad_data)
 {
 	enemy_starts = ds_map_find_value(formation_enemy_starts, _squad_data.start_formation);
 		
-	for (i = 0; i < _squad_data.enemynumber; i++)
+	for (i = 0; i < _squad_data.number; i++)
 	{
 		var _indiv_colour = "";
 		switch (_squad_data.colour)
@@ -136,20 +136,20 @@ function GenerateEnemySquad(_squad_data)
 				break;
 		}
 		
-		CreateEnemy(enemy_starts[i], _squad_data, _indiv_colour);
+		create_enemy(enemy_starts[i], _squad_data, _indiv_colour);
 	}
 }
 
 
-function CreateEnemy(_pos, _squad_data, _indiv_colour)
+function create_enemy(_pos, _squad_data, _indiv_colour)
 {
 	obj = obj_enemy;
 	
-	var current = instance_create_layer(_pos.xpos, _pos.ypos, "Instances", obj);
-	sprite = asset_get_index("spr_" + _squad_data.enemytype + "_" +  _indiv_colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
-	current.colour = _indiv_colour;
-	current.speed = _squad_data.xspeed;
-	current.sprite_index = sprite;
-	current.initial_ypos = _pos.ypos;
-	current.vertical_movement_function = ds_map_find_value(formation_enemy_movement, _squad_data.movement);
+	var _current = instance_create_layer(_pos.xpos, _pos.ypos, "Instances", obj);
+	sprite = asset_get_index("spr_" + _squad_data.type + "_" +  _indiv_colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
+	_current.colour = _indiv_colour;
+	_current.speed = _squad_data.xspeed;
+	_current.sprite_index = sprite;
+	_current.initial_ypos = _pos.ypos;
+	_current.vertical_movement_function = ds_map_find_value(formation_enemy_movement, _squad_data.movement);
 }
