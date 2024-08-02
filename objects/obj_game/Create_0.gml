@@ -10,6 +10,9 @@ points = 0;
 fire_delay_count = 0;
 frame_count = 0;
 
+upgrade_drop_array = [50,100,250,450,700,1100,1700,2500,3400,4500];
+
+
 game_status = GAME_STATUS_ENUM.WAVE_IN_PROGRESS;
 
 init_enemy_gen();

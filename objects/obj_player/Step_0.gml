@@ -53,7 +53,45 @@ if keyboard_check_pressed(vk_tab) || keyboard_check_pressed(ord("E"))
 if keyboard_check(vk_space) && obj_game.fire_delay_count <= 0
 {	
 	obj_game.fire_delay_count = 8;
-	instance_create_layer(x, y, "Instances", obj_bullet);
+	
+	if (upgrade_levels[? current_colour + "_streams"] == 1)
+	{
+		instance_create_layer(x, y, "Instances", obj_bullet);
+	}
+	else if (upgrade_levels[? current_colour + "_streams"] == 2)
+	{
+		instance_create_layer(x - 5, y - 20, "Instances", obj_bullet);
+		instance_create_layer(x - 5, y + 20, "Instances", obj_bullet);
+	}
+	else if (upgrade_levels[? current_colour + "_streams"] == 3)
+	{
+		instance_create_layer(x, y, "Instances", obj_bullet);
+		var _inst1 = instance_create_layer(x - 5, y + 20, "Instances", obj_bullet)
+		with(_inst1)
+		{
+			direction = 335;
+		}
+		var _inst2 = instance_create_layer(x - 5, y - 20, "Instances", obj_bullet)
+		with(_inst2)
+		{
+			direction = 25;
+		}
+	}
+	else if (upgrade_levels[? current_colour + "_streams"] == 4)
+	{
+		instance_create_layer(x - 5, y - 10, "Instances", obj_bullet);
+		instance_create_layer(x - 5, y + 10, "Instances", obj_bullet);
+		var _inst1 = instance_create_layer(x - 5, y + 20, "Instances", obj_bullet)
+		with(_inst1)
+		{
+			direction = 330;
+		}
+		var _inst2 = instance_create_layer(x - 5, y - 20, "Instances", obj_bullet)
+		with(_inst2)
+		{
+			direction = 30;
+		}
+	}
 	
 	var _laser_sound = choose(snd_laser1,snd_laser2,snd_laser3);
 	

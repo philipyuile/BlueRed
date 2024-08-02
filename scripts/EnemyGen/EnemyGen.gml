@@ -143,13 +143,13 @@ function generate_enemy_squad(_squad_data)
 
 function create_enemy(_pos, _squad_data, _indiv_colour)
 {
-	obj = obj_enemy;
+	var _obj = obj_enemy;
 	
-	var _current = instance_create_layer(_pos.xpos, _pos.ypos, "Instances", obj);
-	sprite = asset_get_index("spr_" + _squad_data.type + "_" +  _indiv_colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
+	var _current = instance_create_layer(_pos.xpos, _pos.ypos, "Instances", _obj);
+	var _sprite = asset_get_index("spr_" + _squad_data.type + "_" +  _indiv_colour);// == "red" ? spr_enemy1_red : spr_enemy1_blue;
 	_current.colour = _indiv_colour;
 	_current.speed = _squad_data.xspeed;
-	_current.sprite_index = sprite;
+	_current.sprite_index = _sprite;
 	_current.initial_ypos = _pos.ypos;
 	_current.vertical_movement_function = ds_map_find_value(formation_enemy_movement, _squad_data.movement);
 }
