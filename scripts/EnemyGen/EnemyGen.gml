@@ -74,6 +74,34 @@ function init_enemy_gen()
 			{ xpos : room_width * 18/10, ypos : room_height / 2},
 		]
 	);
+	
+	ds_map_add(formation_enemy_starts, "highcolumn",
+		[
+			{ xpos : room_width, ypos : room_height * 3/4},
+			{ xpos : room_width * 11/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 12/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 13/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 14/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 15/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 16/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 17/10, ypos : room_height * 3/4},
+			{ xpos : room_width * 18/10, ypos : room_height * 3/4},
+		]
+	);
+	
+	ds_map_add(formation_enemy_starts, "lowcolumn",
+		[
+			{ xpos : room_width, ypos : room_height * 1/4},
+			{ xpos : room_width * 11/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 12/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 13/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 14/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 15/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 16/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 17/10, ypos : room_height * 1/4},
+			{ xpos : room_width * 18/10, ypos : room_height * 1/4},
+		]
+	);
 
 	ds_map_add(formation_enemy_starts, "arrow",
 		[
