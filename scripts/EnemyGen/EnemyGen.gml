@@ -119,7 +119,7 @@ function generate_enemy_squad(_squad_data)
 {
 	enemy_starts = ds_map_find_value(formation_enemy_starts, _squad_data.start_formation);
 		
-	for (i = 0; i < _squad_data.number; i++)
+	for (i = 0; i < _squad_data.squad_size; i++)
 	{
 		var _indiv_colour = "";
 		switch (_squad_data.colour)

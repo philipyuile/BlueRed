@@ -14,4 +14,4 @@ if current_wave > max_waves
 	return;
 }
 
-obj_game.current_wave_map = load_wave_from_file(current_wave);
+obj_game.current_wave_queue = load_wave_from_file(current_wave);

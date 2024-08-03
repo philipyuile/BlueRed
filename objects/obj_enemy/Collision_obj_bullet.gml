@@ -1,20 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if other.sprite_index = spr_bullet_red && colour == "blue"
+if other.sprite_index = spr_bullet_red && colour == "blue" ||
+	other.sprite_index = spr_bullet_blue && colour == "red"
 {
+	var _effect_colour = colour == "blue" ? $3333FF : $FF3333;
 	var _ricochet_sound = choose(snd_ricochet1,snd_ricochet2,snd_ricochet3,snd_ricochet4);
 	audio_play_sound(_ricochet_sound, 10, false);
-	effect_create_above(ef_spark, x, y, 1, $3333FF);
-	deactivate_bullet(other);
-	return;
-}
-
-if other.sprite_index = spr_bullet_blue && colour == "red"
-{
-	var _ricochet_sound = choose(snd_ricochet1,snd_ricochet2,snd_ricochet3,snd_ricochet4);
-	audio_play_sound(_ricochet_sound, 10, false);
-	effect_create_above(ef_spark, x, y, 1, $FF3333);
+	effect_create_above(ef_spark, x, y, 1, _effect_colour);
 	deactivate_bullet(other);
 	return;
 }

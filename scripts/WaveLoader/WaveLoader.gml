@@ -4,7 +4,7 @@ function load_wave_from_file(_wave_number){
 	var _filepath = working_directory + "wave" + string(_wave_number) + ".txt";
 	var _file = file_text_open_read(_filepath);
 	
-	var _wave_map = ds_map_create();
+	var _wave_queue = ds_queue_create();
 	
 	while (true)
 	{
@@ -14,25 +14,26 @@ function load_wave_from_file(_wave_number){
 		if (array_length(_current_tokens) > 2) {
 			var _squad_data =
 			{
-				number : _current_tokens[1],
+				frame_number : _current_tokens[0],
+				squad_size : _current_tokens[1],
 				start_formation : _current_tokens[2],
 				movement : _current_tokens[3],
 				colour : _current_tokens[4],
 				type : _current_tokens[5],
 				xspeed : _current_tokens[6]
 			}
-			ds_map_add(_wave_map, _frame_number, _squad_data);
+			ds_queue_enqueue(_wave_queue, _squad_data);
 		}
 		else
 		{
-			var _end_data = { start_formation : _current_tokens[1] };
-			ds_map_add(_wave_map, _frame_number, _end_data);
+			var _end_data = {frame_number : _current_tokens[0], start_formation : _current_tokens[1] };
+			ds_queue_enqueue(_wave_queue, _end_data);
 			file_text_close(_file);
 			break;
 		}
 	}
 	
-	return _wave_map;
+	return _wave_queue;
 }
 
 function get_max_waves() {

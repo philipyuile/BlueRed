@@ -2,10 +2,8 @@
 // You can write your code in this editor
 current_wave = 1;
 max_waves = get_max_waves();
-current_wave_map = load_wave_from_file(current_wave);
+current_wave_queue = load_wave_from_file(current_wave);
 inactive_bullet_queue = ds_queue_create();
-
-json = json_encode(obj_game.current_wave_map);
 
 points = 0;
 fire_delay_count = 0;
