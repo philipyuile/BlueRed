@@ -6,7 +6,7 @@ if other.sprite_index = spr_bullet_red && colour == "blue"
 	var _ricochet_sound = choose(snd_ricochet1,snd_ricochet2,snd_ricochet3,snd_ricochet4);
 	audio_play_sound(_ricochet_sound, 10, false);
 	effect_create_above(ef_spark, x, y, 1, $3333FF);
-	instance_destroy(other);
+	deactivate_bullet(other);
 	return;
 }
 
@@ -15,7 +15,7 @@ if other.sprite_index = spr_bullet_blue && colour == "red"
 	var _ricochet_sound = choose(snd_ricochet1,snd_ricochet2,snd_ricochet3,snd_ricochet4);
 	audio_play_sound(_ricochet_sound, 10, false);
 	effect_create_above(ef_spark, x, y, 1, $FF3333);
-	instance_destroy(other);
+	deactivate_bullet(other);
 	return;
 }
 

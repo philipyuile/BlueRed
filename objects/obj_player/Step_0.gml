@@ -56,45 +56,45 @@ if keyboard_check(vk_space) && obj_game.fire_delay_count <= 0
 	
 	if (upgrade_levels[? current_colour + "_streams"] == 1)
 	{
-		instance_create_layer(x, y, "Instances", obj_bullet);
+		create_bullet(x, y, image_angle, bullet_speed, current_colour);
 	}
 	else if (upgrade_levels[? current_colour + "_streams"] == 2)
 	{
-		instance_create_layer(x - 5, y - 20, "Instances", obj_bullet);
-		instance_create_layer(x - 5, y + 20, "Instances", obj_bullet);
+		create_bullet(x - 5, y - 20, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle, bullet_speed, current_colour);
 	}
 	else if (upgrade_levels[? current_colour + "_streams"] == 3)
 	{
-		instance_create_layer(x, y, "Instances", obj_bullet);
-		var _inst1 = instance_create_layer(x - 5, y + 20, "Instances", obj_bullet)
-		with(_inst1)
-		{
-			direction = 335;
-		}
-		var _inst2 = instance_create_layer(x - 5, y - 20, "Instances", obj_bullet)
-		with(_inst2)
-		{
-			direction = 25;
-		}
+		create_bullet(x, y, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 25, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 25, bullet_speed, current_colour);
 	}
 	else if (upgrade_levels[? current_colour + "_streams"] == 4)
 	{
-		instance_create_layer(x - 5, y - 10, "Instances", obj_bullet);
-		instance_create_layer(x - 5, y + 10, "Instances", obj_bullet);
-		var _inst1 = instance_create_layer(x - 5, y + 20, "Instances", obj_bullet)
-		with(_inst1)
-		{
-			direction = 330;
-		}
-		var _inst2 = instance_create_layer(x - 5, y - 20, "Instances", obj_bullet)
-		with(_inst2)
-		{
-			direction = 30;
-		}
+		create_bullet(x - 5, y - 10, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 10, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 30, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 30, bullet_speed, current_colour);
+	}
+	else if (upgrade_levels[? current_colour + "_streams"] == 5)
+	{
+		create_bullet(x, y, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 20, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 20, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 40, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 40, bullet_speed, current_colour);
+	}
+	else if (upgrade_levels[? current_colour + "_streams"] == 6)
+	{
+		create_bullet(x - 5, y - 10, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 10, image_angle, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 22, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 22, bullet_speed, current_colour);
+		create_bullet(x - 5, y + 20, image_angle - 45, bullet_speed, current_colour);
+		create_bullet(x - 5, y - 20, image_angle + 45, bullet_speed, current_colour);
 	}
 	
 	var _laser_sound = choose(snd_laser1,snd_laser2,snd_laser3);
-	
 	audio_play_sound(_laser_sound, 10, false);
 }
 else if keyboard_check(vk_space) && obj_game.fire_delay_count > 0

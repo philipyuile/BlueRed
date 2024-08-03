@@ -55,6 +55,7 @@
     {"id":{"name":"obj_upgrade","path":"objects/obj_upgrade/obj_upgrade.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"rm_mainmenu","path":"rooms/rm_mainmenu/rm_mainmenu.yy",},},
+    {"id":{"name":"BulletGen","path":"scripts/BulletGen/BulletGen.yy",},},
     {"id":{"name":"EnemyGen","path":"scripts/EnemyGen/EnemyGen.yy",},},
     {"id":{"name":"PlayerMovement","path":"scripts/PlayerMovement/PlayerMovement.yy",},},
     {"id":{"name":"WaveLoader","path":"scripts/WaveLoader/WaveLoader.yy",},},
