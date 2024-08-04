@@ -1,5 +1,0 @@
-0,5,left,straight,red,enemy1,5
-200,5,right,straight,blue,enemy1,5
-450,7,arrow,straight,red,enemy2,5
-700,7,backarrow,straight,blue,enemy2,5
-800,end

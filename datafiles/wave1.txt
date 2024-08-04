@@ -1,7 +1,5 @@
-0,5,highcolumn,tan,red,enemy1,5
-0,5,lowcolumn,negtan,blue,enemy1,5
-500,5,column,sin,red,enemy1,5
-500,5,column,negsin,blue,enemy1,5
-1000,5,column,cos,red,enemy1,5
-1000,5,column,negcos,blue,enemy1,5
-1500,end
+0,5,left,straight,red,enemy1,5
+200,5,right,straight,blue,enemy1,5
+450,7,arrow,straight,red,enemy2,5
+700,7,backarrow,straight,blue,enemy2,5
+800,end
