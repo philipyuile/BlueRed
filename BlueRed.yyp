@@ -29,6 +29,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"wave1.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave1.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"wave11.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave11.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"wave1a.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave1a.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"wave2.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave2.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"wave3.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave3.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"wave4.txt","CopyToMask":-1,"filePath":"datafiles","name":"wave4.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

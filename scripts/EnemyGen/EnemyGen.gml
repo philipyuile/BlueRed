@@ -47,6 +47,35 @@ function init_enemy_gen()
 		]
 	);
 	
+	ds_map_add(formation_enemy_starts, "highline",
+		[
+			{ xpos : room_width, ypos : room_height * 15/10},
+			{ xpos : room_width, ypos : room_height * 14/10},
+			{ xpos : room_width, ypos : room_height * 16/10},
+			{ xpos : room_width, ypos : room_height * 13/10},
+			{ xpos : room_width, ypos : room_height * 17/10},
+			{ xpos : room_width, ypos : room_height * 12/10},
+			{ xpos : room_width, ypos : room_height * 18/10},
+			{ xpos : room_width, ypos : room_height * 11/10},
+			{ xpos : room_width, ypos : room_height * 19/10},
+		]
+	);
+	
+	ds_map_add(formation_enemy_starts, "lowline",
+		[
+			{ xpos : room_width, ypos : room_height * -5/10},
+			{ xpos : room_width, ypos : room_height * -4/10},
+			{ xpos : room_width, ypos : room_height * -6/10},
+			{ xpos : room_width, ypos : room_height * -3/10},
+			{ xpos : room_width, ypos : room_height * -7/10},
+			{ xpos : room_width, ypos : room_height * -2/10},
+			{ xpos : room_width, ypos : room_height * -8/10},
+			{ xpos : room_width, ypos : room_height * -1/10},
+			{ xpos : room_width, ypos : room_height * -9/10},
+		]
+	);
+	
+	
 	ds_map_add(formation_enemy_starts, "staggered",
 		[
 			{ xpos : room_width * 11/10, ypos : room_height * 5/10},
@@ -135,11 +164,19 @@ function init_enemy_gen()
 	
 	global.no_vert_movement = function(_xpos, _initial_ypos) {return _initial_ypos; };
 	global.sin_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + sin(_xpos / (room_width * 1/10)) * room_height / 5; };
-	global.cos_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + cos(_xpos / 100.0) * 200; };
+	global.neg_sin_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos - sin(_xpos / (room_width * 1/10)) * room_height / 5; };
+	global.cos_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + cos(_xpos / (room_width * 1/10)) * room_height / 5; };
+	global.neg_cos_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos - cos(_xpos / (room_width * 1/10)) * room_height / 5; };
+	global.tan_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos - room_height / 2 + tan(_xpos / (room_width * 5/8)) * room_height / 5; };
+	global.neg_tan_vert_movement = function(_xpos, _initial_ypos) { return _initial_ypos + room_height / 2 - tan(_xpos / (room_width * 5/8)) * room_height / 5; };
 	
 	ds_map_add(formation_enemy_movement, "straight", global.no_vert_movement);
 	ds_map_add(formation_enemy_movement, "sin", global.sin_vert_movement);
 	ds_map_add(formation_enemy_movement, "cos", global.cos_vert_movement);
+	ds_map_add(formation_enemy_movement, "tan", global.tan_vert_movement);
+	ds_map_add(formation_enemy_movement, "negsin", global.neg_sin_vert_movement);
+	ds_map_add(formation_enemy_movement, "negcos", global.neg_cos_vert_movement);
+	ds_map_add(formation_enemy_movement, "negtan", global.neg_tan_vert_movement);
 
 }
 
