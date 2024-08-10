@@ -11,6 +11,8 @@ if (obj_game.game_status == GAME_STATUS_ENUM.WAVE_COMPLETE_ONE)
 	else
 	{
 		obj_game.game_status = GAME_STATUS_ENUM.WAVE_COMPLETE_TWO;
+		sprite_index = asset_get_index("spr_player_" + current_colour + "_upgrade1_flip");
+
 		speed = 0;
 	}
 	return;
@@ -23,7 +25,7 @@ else if (obj_game.game_status == GAME_STATUS_ENUM.WAVE_COMPLETE_TWO)
 	var _distance_to_starting_point = point_distance(x, y, _destination_x, _destination_y);
 	if (_distance_to_starting_point > 1)
 	{
-		move_towards_point(_destination_x, _destination_y, max(1, _distance_to_starting_point / 20));
+		move_towards_point(_destination_x, _destination_y, max(1, _distance_to_starting_point / 30));
 	}
 	else
 	{
@@ -31,23 +33,19 @@ else if (obj_game.game_status == GAME_STATUS_ENUM.WAVE_COMPLETE_TWO)
 	}
 	return;
 }
+else if (obj_game.game_status == GAME_STATUS_ENUM.WAVE_IN_PROGRESS)
+{
+	sprite_index = asset_get_index("spr_player_" + current_colour + "_upgrade1");
+}
 
 EightWayMovement(vk_right, vk_left, vk_up, vk_down);
 EightWayMovement(ord("D"), ord("A"), ord("W"), ord("S"));
 
 if keyboard_check_pressed(vk_tab) || keyboard_check_pressed(ord("E"))
 {
-	if current_colour == "red"
-	{
-		sprite_index = spr_player_blue;
-		current_colour = "blue";
-	}
-	
-	else if current_colour == "blue"
-	{
-		sprite_index = spr_player_red;
-		current_colour = "red";
-	}
+	current_colour = current_colour == "red" ? "blue" : "red";
+	sprite_index = asset_get_index("spr_player_" + current_colour + "_upgrade1");
+	//+ string(upgrade_levels[current_colour + "_streams"])
 }
 
 if keyboard_check(vk_space) && obj_game.fire_delay_count <= 0

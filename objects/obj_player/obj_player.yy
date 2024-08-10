@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_red",
-    "path":"sprites/spr_player_red/spr_player_red.yy",
+    "name":"spr_player_red_upgrade1",
+    "path":"sprites/spr_player_red_upgrade1/spr_player_red_upgrade1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
